@@ -87,9 +87,7 @@ public class Proj : MonoBehaviour {
         
         Vector3 origin = transform.position;
         Collider2D hit = Physics2D.OverlapCircle(new Vector2(origin.x,origin.y), 1);
-        Debug.DrawRay(origin, new Vector2(0, 1));
         if (hit) {
-            Debug.Log(hit.gameObject.name);
             if (hit.gameObject.name == "Player 1") player1.ReceiveDamage(10);
             else if (hit.gameObject.name == "Player 2") player2.ReceiveDamage(10);
         }
